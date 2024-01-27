@@ -13,6 +13,7 @@ public class spriteController : MonoBehaviour
     public Gradient fadeOut; //white to gray
     public Gradient completeFadeIn; //alpha 0 to alpha 100
     public Gradient completeFadeOut; //alpha 100 to alpha 0
+    public Sprite[] expressions;
 
     private void Awake()
     {
@@ -94,5 +95,50 @@ public class spriteController : MonoBehaviour
     public void Appear() //used to make a sprite appear immediately with no fading
     {
         sprite.color = baseColor;
+    }
+
+    public void Base()
+    {
+        sprite.sprite = expressions[0];
+    }
+
+    public void Anger()
+    {
+        sprite.sprite = expressions[1];
+    }
+
+    public void Axe()
+    {
+        sprite.sprite = expressions[2];
+    }
+
+    public void Confuse()
+    {
+        sprite.sprite = expressions[3];
+    }
+
+    public void Depress()
+    {
+        sprite.sprite = expressions[4];
+    }
+
+    public void Shock()
+    {
+        sprite.sprite = expressions[5];
+    }
+
+    public void Smirk()
+    {
+        sprite.sprite = expressions[6];
+    }
+
+    public void Smug()
+    {
+        sprite.sprite = expressions[7];
+    }
+
+    public void Worry()
+    {
+        sprite.sprite = expressions[8];
     }
 }
