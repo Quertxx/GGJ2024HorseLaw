@@ -664,10 +664,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 784544966}
-  target1:
+  targets:
   - {fileID: 390784765}
   - {fileID: 1602776394}
   - {fileID: 753170078}
+  stateMachineAI: 0
+  spinrate: 0.5
+  delayTimer: 2
 --- !u!195 &693872916
 NavMeshAgent:
   m_ObjectHideFlags: 0
