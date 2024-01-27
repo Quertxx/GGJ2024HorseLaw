@@ -14,6 +14,10 @@ public class AI_Detection : MonoBehaviour
 
     public bool isBeingDetected;
 
+
+
+
+    public List<IndividualDetection> detecions;
     private void OnEnable()
     {
         if (instance == null)
@@ -55,6 +59,38 @@ public class AI_Detection : MonoBehaviour
             detectionBar.value = detection;
         }
 
+        Debug.Log("List has " + ListSpottedAmmount());
 
     }
+
+    public void AddToList(AI_Controller controler)
+    {
+
+    }
+
+    public void RemoveFromList(AI_Controller controler)
+    {
+
+    }
+
+    public int ListSpottedAmmount()
+    {
+        int countNumber =0;
+        foreach (IndividualDetection detection in detecions)
+        {
+            if (detection.seesThePlayer)
+            {
+                countNumber++;
+            }
+        }
+
+        return countNumber;
+    }
+}
+
+[System.Serializable]
+public class IndividualDetection
+{
+    public AI_Controller controller;
+    public bool seesThePlayer;
 }
