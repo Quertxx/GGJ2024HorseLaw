@@ -3028,6 +3028,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -8.343576
       objectReference: {fileID: 0}
+    - target: {fileID: 4452953977551747998, guid: 50628607852c99849b5268eb9ef8594b, type: 3}
+      propertyPath: m_XAxis.m_InvertInput
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5492393881349576031, guid: 50628607852c99849b5268eb9ef8594b, type: 3}
       propertyPath: m_Name
       value: PlayerParent
