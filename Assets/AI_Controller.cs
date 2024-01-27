@@ -109,15 +109,13 @@ public class AI_Controller : MonoBehaviour
 
     public float GetPlayerVisibility()
     {
-        Debug.Log(player);
         return lineOfSightSensor.GetResult(player).Visibility;
     }
 
     private void detecting()
     {
         playerDetectionRunning = true;
-        Debug.Log(AI_Detection.instance.gameObject);
-        AI_Detection.instance.IncreaseDetection(GetPlayerVisibility() * Time.deltaTime);
+        AI_Detection.instance.IncreaseDetection(GetPlayerVisibility());
 
     }
 

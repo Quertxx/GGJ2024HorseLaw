@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AI_Detection : MonoBehaviour
 {
-    [Range(0,1)]public float detection;
+    [Range(0,1)] public float detection;
     public Slider detectionBar;
     [SerializeField] public static AI_Detection instance;
 
@@ -30,10 +30,13 @@ public class AI_Detection : MonoBehaviour
     {
         isBeingDetected = true;
         Debug.Log("final test " + detectionAmmount );
-        float detectionIncrease = detectionAmmount * detectionSpeed;
-        detection += detectionIncrease;
+        float detectionIncrease = detectionAmmount * detectionSpeed * Time.deltaTime;
+        Debug.Log(detectionIncrease);
+        detection = Mathf.Clamp(detection + detectionIncrease,0,1);
+        Debug.Log(detection);
+        detectionBar.value = detection;
 
-        if (detectionIncrease <= 0.001)
+        if (detectionAmmount == 0)
         {
             StopDetection();
         }
@@ -48,7 +51,8 @@ public class AI_Detection : MonoBehaviour
     {
         if (!isBeingDetected)
         {
-            detection -= detectionDecreaseSpeed * Time.deltaTime;
+            detection = Mathf.Clamp(detection - detectionDecreaseSpeed * Time.deltaTime, 0, 1);
+            detectionBar.value = detection;
         }
     }
 }
