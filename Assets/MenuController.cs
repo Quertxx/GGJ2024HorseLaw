@@ -22,7 +22,7 @@ public class MenuController : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(5);
     }
 
     public void exit()
@@ -31,8 +31,7 @@ public class MenuController : MonoBehaviour
     }
     public void credits()
     {
-        MainMenuParent.SetActive(false);
-        creditsParent.SetActive(true);
+        SceneManager.LoadScene(1);
     }
     public void hideCredits()
     {
