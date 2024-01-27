@@ -19,7 +19,14 @@ public class spriteController : MonoBehaviour
         sprite = GetComponent<Image>();
     }
 
-    void FadeIn() //used to transition from OutOfFocus to BaseColor
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            FadeInCompletely();
+        }
+    }
+    public void FadeIn() //used to transition from OutOfFocus to BaseColor
     {
         StartCoroutine(FadeInLerp());
     }
@@ -34,7 +41,7 @@ public class spriteController : MonoBehaviour
         }   
     }
 
-    void FadeOut() //used to transition from BaseColor to OutOfFocus
+    public void FadeOut() //used to transition from BaseColor to OutOfFocus
     {
         StartCoroutine(FadeOutLerp());
     }
@@ -49,7 +56,7 @@ public class spriteController : MonoBehaviour
         }
     }
 
-    void FadeInCompletely() //used to fade the sprite in from not being visible
+    public void FadeInCompletely() //used to fade the sprite in from not being visible
     {
         StartCoroutine(FadeInCompletelyLerp());
     }
@@ -64,7 +71,7 @@ public class spriteController : MonoBehaviour
         }
     }
 
-    void FadeOutCompletely() //used to fade sprite out to not being visible
+    public void FadeOutCompletely() //used to fade sprite out to not being visible
     {
         StartCoroutine(FadeOutCompletelyLerp());
     }
@@ -79,12 +86,12 @@ public class spriteController : MonoBehaviour
         }
     }
 
-    void Disappear() //used to make a sprite disappear immediately with no fading
+    public void Disappear() //used to make a sprite disappear immediately with no fading
     {
         sprite.color = new Vector4(0f,0f,0f,0f);
     }
 
-    void Appear() //used to make a sprite appear immediately with no fading
+    public void Appear() //used to make a sprite appear immediately with no fading
     {
         sprite.color = baseColor;
     }

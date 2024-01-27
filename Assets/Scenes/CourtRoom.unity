@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 433911604}
+  selectedFlowchart: {fileID: 1430259796}
 --- !u!4 &294209124
 Transform:
   m_ObjectHideFlags: 1
@@ -638,7 +638,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 251
     y: 280
-    width: 208
+    width: 213.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -664,7 +664,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 3
     y: 339
-    width: 204
+    width: 209.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -690,7 +690,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -254
     y: 272
-    width: 214
+    width: 218.8
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -738,7 +738,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 59
     y: 139
-    width: 94
+    width: 95.6
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -851,7 +851,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 24
     y: 67
-    width: 166
+    width: 170
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -916,7 +916,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 44
     y: -3
-    width: 122
+    width: 123.6
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2363,6 +2363,7 @@ GameObject:
   - component: {fileID: 1430259801}
   - component: {fileID: 1430259800}
   - component: {fileID: 1430259805}
+  - component: {fileID: 1430259806}
   m_Layer: 0
   m_Name: Flowchart for Henry
   m_TagString: Untagged
@@ -3096,7 +3097,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 504.86615
     y: 646.9584
-    width: 232.85707
+    width: 233.99992
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3126,7 +3127,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 236.86615
     y: 693.9584
-    width: 228.57135
+    width: 231.71422
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3155,7 +3156,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -7.13385
     y: 645.9584
-    width: 222.85707
+    width: 224.85707
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3282,7 +3283,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 297
     y: 518
-    width: 104.28569
+    width: 103.714264
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3432,7 +3433,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 260
     y: 435
-    width: 177.1428
+    width: 179.1428
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3686,7 +3687,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 540
     y: 251
-    width: 212.85707
+    width: 213.4285
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3715,7 +3716,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 244
     y: 281
-    width: 207.14279
+    width: 207.71422
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3744,7 +3745,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -44
     y: 233
-    width: 215.71422
+    width: 216.85707
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3871,7 +3872,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 299
     y: 156
-    width: 94.2857
+    width: 93.42856
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4034,9 +4035,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 262
+    x: 260.57144
     y: 75
-    width: 165.71423
+    width: 167.71423
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4046,6 +4047,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1430259792}
+  - {fileID: 1430259806}
   - {fileID: 1430259799}
   - {fileID: 1430259790}
   - {fileID: 1430259798}
@@ -4083,7 +4085,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 283
     y: 6
-    width: 121.42854
+    width: 124.28568
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4107,10 +4109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 602.6415, y: 232.08911}
+  scrollPos: {x: 85.49887, y: 136.37486}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 552
+  blockViewHeight: 553.8
   zoom: 0.7000003
   scrollViewRect:
     serializedVersion: 2
@@ -4121,7 +4123,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1430259793}
   selectedCommands:
-  - {fileID: 1430259790}
+  - {fileID: 1430259806}
   variables: []
   description: 
   stepPause: 0
@@ -4370,6 +4372,34 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1430259806
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430259732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 70
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1239426647}
+  targetComponentAssemblyName: spriteController, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: spriteController
+  targetMethod: FadeInCompletely
+  targetMethodText: 'FadeInCompletely (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &1549909352
 GameObject:
   m_ObjectHideFlags: 0
@@ -4555,8 +4585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891c7b0b6300c3d418a084567d9c3dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Henryflowchart: {fileID: 0}
-  Bunnyflowchart: {fileID: 0}
+  Henryflowchart: {fileID: 1430259732}
+  Bunnyflowchart: {fileID: 433911587}
 --- !u!4 &1787948786
 Transform:
   m_ObjectHideFlags: 0
