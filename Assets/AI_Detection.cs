@@ -54,5 +54,7 @@ public class AI_Detection : MonoBehaviour
             detection = Mathf.Clamp(detection - detectionDecreaseSpeed * Time.deltaTime, 0, 1);
             detectionBar.value = detection;
         }
+
+
     }
 }
