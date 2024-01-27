@@ -16,8 +16,8 @@ public class playerController : MonoBehaviour
     void Start()
     {
         playerRef = gameObject.transform.GetChild(0).gameObject;
-        playerRB = GetComponent<Rigidbody>();
-        playerRB2 = playerRef.GetComponent<Rigidbody>();
+        playerRB = gameObject.GetComponent<Rigidbody>();
+        //playerRB2 = playerRef.GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         cam = Camera.main;
@@ -44,7 +44,7 @@ public class playerController : MonoBehaviour
         Vector3 desiredDirecton = forward * axisY + right * axisX;
         //transform.rotation = Quaternion.LookRotation(forward);
         //transform.Translate(desiredDirecton * speed * Time.deltaTime);
-        playerRB.velocity = new Vector3(desiredDirecton.x * speed, playerRB2.velocity.y, desiredDirecton.z * speed);
-        playerRB2.velocity = new Vector3(desiredDirecton.x * speed, playerRB2.velocity.y, desiredDirecton.z * speed);
+        playerRB.velocity = new Vector3(desiredDirecton.x * speed, playerRB.velocity.y, desiredDirecton.z * speed);
+        //playerRB2.velocity = new Vector3(desiredDirecton.x * speed, playerRB2.velocity.y, desiredDirecton.z * speed);
     }
 }
