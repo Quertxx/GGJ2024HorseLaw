@@ -5,7 +5,8 @@ using UnityEngine;
 public class testDialogue : MonoBehaviour
 {
 
-    public GameObject flowchart;
+    public GameObject Henryflowchart;
+    public GameObject Bunnyflowchart;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +16,25 @@ public class testDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q)) 
+        {
+
+            Bunnyflowchart.SetActive(true);
+       
+        }
+
+
+
+
+
         if(Input.GetKeyDown(KeyCode.E)) 
         {
-            flowchart.SetActive(true);
+            Henryflowchart.SetActive(true);
+      
         }
     }
+
+
+
+
 }
