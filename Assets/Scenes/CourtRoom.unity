@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2828139395070106000}
+  selectedFlowchart: {fileID: 6744327123664900583}
 --- !u!4 &294209124
 Transform:
   m_ObjectHideFlags: 1
@@ -11717,17 +11717,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbdb74e5e049bc64d8fd119794e2186f, type: 3}
---- !u!114 &2828139395070106000 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1656733338612363555, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
-  m_PrefabInstance: {fileID: 4403775520170557748}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8156800030813642176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4403775520170557748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11758,7 +11747,7 @@ PrefabInstance:
       objectReference: {fileID: 1576054686}
     - target: {fileID: 1656733338612363555, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
       propertyPath: selectedBlocks.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1900487970547312674, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
       propertyPath: character
@@ -11784,10 +11773,6 @@ PrefabInstance:
       propertyPath: targetObject
       value: 
       objectReference: {fileID: 1239426647}
-    - target: {fileID: 3760395158915932778, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
-      propertyPath: nodeRect.y
-      value: 649.27704
-      objectReference: {fileID: 0}
     - target: {fileID: 4092592912199276991, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
       propertyPath: targetObject
       value: 
@@ -11835,10 +11820,6 @@ PrefabInstance:
     - target: {fileID: 4319488538137912920, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4559829824207049493, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
-      propertyPath: nodeRect.x
-      value: 258.9011
       objectReference: {fileID: 0}
     - target: {fileID: 5418414944546890761, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
       propertyPath: character
@@ -11906,6 +11887,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1586334559370067691, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
   m_PrefabInstance: {fileID: 9221190436893135510}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6744327123664900583 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5075564213113036146, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
+  m_PrefabInstance: {fileID: 9221190436893135510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744327123664900506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8156800030813642176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9169345987949557039, guid: e3aee54c97e1edc469e12e31c8f7e605, type: 3}
@@ -11971,14 +11963,6 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 227859063}
-    - target: {fileID: 5075564213113036146, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
-      propertyPath: selectedBlocks.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5075564213113036146, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
-      propertyPath: selectedCommands.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6042239503403858296, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
       propertyPath: character
       value: 

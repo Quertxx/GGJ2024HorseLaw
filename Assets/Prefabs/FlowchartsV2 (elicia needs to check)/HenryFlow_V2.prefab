@@ -105,6 +105,9 @@ GameObject:
   - component: {fileID: 1226969078246890497}
   - component: {fileID: 4692600557013478079}
   - component: {fileID: 5052022515998771112}
+  - component: {fileID: 3314289242518551852}
+  - component: {fileID: 7635233402932631871}
+  - component: {fileID: 9087568956212857635}
   m_Layer: 0
   m_Name: HenryFlow_V2
   m_TagString: Untagged
@@ -125,7 +128,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1656733338612363555
 MonoBehaviour:
@@ -140,19 +143,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 148.6957, y: -84.540344}
+  scrollPos: {x: 310.26645, y: -257.3961}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 553.8
-  zoom: 0.7900002
+  blockViewHeight: 287.8
+  zoom: 0.64000034
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 3590520325930846693}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -181,7 +183,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 283
     y: 6
-    width: 122.91138
+    width: 121.24996
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -222,7 +224,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 262
     y: 75
-    width: 166.45566
+    width: 166.24994
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -393,7 +395,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 299
     y: 156
-    width: 94.556946
+    width: 96.24997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -518,7 +520,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -41.468353
     y: 233
-    width: 216.07591
+    width: 217.49991
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -551,7 +553,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 244
     y: 279.7342
-    width: 207.97464
+    width: 209.99991
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -582,7 +584,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 541.2658
     y: 249.73418
-    width: 213.03793
+    width: 214.99991
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -835,9 +837,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 260
+    x: 258.9011
     y: 435
-    width: 177.59491
+    width: 177.49994
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -990,7 +992,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 297
     y: 518
-    width: 104.68353
+    width: 106.24997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1092,7 +1094,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -7.13385
     y: 650.08136
-    width: 224.17717
+    width: 224.99991
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1121,8 +1123,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 236.86615
-    y: 693.9584
-    width: 230.25311
+    y: 649.27704
+    width: 229.99991
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1152,7 +1154,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 504.86615
     y: 646.9584
-    width: 233.29109
+    width: 234.9999
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1357,7 +1359,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 252.54819
     y: 829.34906
-    width: 193.79742
+    width: 196.24992
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1396,6 +1398,7 @@ MonoBehaviour:
   - {fileID: 1544281783396276061}
   - {fileID: 2134257711702758319}
   - {fileID: 8020292945810144585}
+  - {fileID: 9087568956212857635}
   suppressAllAutoSelections: 0
 --- !u!114 &6192149792643770480
 MonoBehaviour:
@@ -1873,9 +1876,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 61
   indentLevel: 0
-  storyText: Horse Lawyer raises his head one again, now freshly adorned with a pair
-    of sunglasses, flashed his smile and walked out of the courtroom, another victory
-    to his name.
+  storyText: Horse Lawyer raises his head once again, now freshly adorned with a
+    pair of sunglasses, flashed his smile and walked out of the courtroom, another
+    victory to his name.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2791,4 +2794,73 @@ MonoBehaviour:
   returnValueVariableKey: 
   returnValueType: 
   showInherited: 0
+  callMode: 0
+--- !u!114 &3314289242518551852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169345987949557039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 297.70544
+    y: 916.4137
+    width: 111.24997
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 96
+  blockName: End Dialog
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 7635233402932631871}
+  suppressAllAutoSelections: 0
+--- !u!114 &7635233402932631871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169345987949557039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 97
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 9169345987949557039}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &9087568956212857635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169345987949557039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 98
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 3314289242518551852}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
   callMode: 0
