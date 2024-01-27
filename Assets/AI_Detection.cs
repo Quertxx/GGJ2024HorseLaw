@@ -5,18 +5,28 @@ using UnityEngine.UI;
 
 public class AI_Detection : MonoBehaviour
 {
-    [Range(1,100)] public float detection;
+    public float detection;
     public Slider detectionBar;
+    [SerializeField] public static AI_Detection instance;
 
-    // Start is called before the first frame update
-    void Start()
+    public float detectionSpeed;
+
+    private void OnEnable()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void IncreaseDetection(float detectionAmmount)
     {
-        
+        Debug.Log("final test " + detectionAmmount );
+        detection += detectionAmmount * detectionSpeed;
     }
 }

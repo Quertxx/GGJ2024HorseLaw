@@ -95,6 +95,14 @@ public class AI_Movement : MonoBehaviour
     {
         stateMachineAI = states.idle;
     }
+    public void setSpin()
+    {
+        stateMachineAI = states.spin;
+    }
+    public void setSpinPatrol()
+    {
+        stateMachineAI = states.spinPatrol;
+    }
 
     IEnumerator delay()
     {
@@ -109,7 +117,7 @@ public class AI_Movement : MonoBehaviour
                 hasStarted = false;
             }
 
-            if (Vector3.Distance(gameObject.transform.position, targets[index].position) < 1)
+            if (Vector3.Distance(gameObject.transform.position, targets[index].position) < 2)
             {
                 
                 index++;
