@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,8 +17,8 @@ public class AI_Detection : MonoBehaviour
 
 
 
-
-    public List<IndividualDetection> detecions;
+    public GameObject playerCollider;
+    public List<AI_Controller> detections;
     private void OnEnable()
     {
         if (instance == null)
@@ -29,62 +30,43 @@ public class AI_Detection : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
-    public void IncreaseDetection(float detectionAmmount)
-    {
-        isBeingDetected = true;
-        Debug.Log("final test " + detectionAmmount );
-        float detectionIncrease = detectionAmmount * detectionSpeed * Time.deltaTime;
-        Debug.Log(detectionIncrease);
-        detection = Mathf.Clamp(detection + detectionIncrease,0,1);
-        Debug.Log(detection);
-        detectionBar.value = detection;
-
-        if (detectionAmmount == 0)
-        {
-            StopDetection();
-        }
-    }
-
-    public void StopDetection()
-    {
-        isBeingDetected = false;
-    }
-
     private void Update()
     {
-        if (!isBeingDetected)
+        NewNewDetection();
+    }
+    void NewNewDetection()
+    {
+        int countNumber = 0;
+        float detectionIncrease = 0;
+        foreach (AI_Controller detection in detections)
+        {
+            float temp = detection.lineOfSightSensor.GetResult(playerCollider).Visibility;
+            if (temp > 0)
+            {
+                countNumber++;
+                detectionIncrease += detection.lineOfSightSensor.GetResult(playerCollider).Visibility;
+            }
+        }
+        if (countNumber > 0)
+        {
+            detectionIncrease = detectionIncrease * Time.deltaTime * detectionSpeed;
+            detection = Mathf.Clamp(detection + detectionIncrease, 0, 1);
+        }
+        else
         {
             detection = Mathf.Clamp(detection - detectionDecreaseSpeed * Time.deltaTime, 0, 1);
-            detectionBar.value = detection;
         }
-
-        Debug.Log("List has " + ListSpottedAmmount());
-
+        detectionBar.value = detection;
     }
 
-    public void AddToList(AI_Controller controler)
+    public void AddToList(AI_Controller controller)
     {
-
+        detections.Add(controller);
     }
 
     public void RemoveFromList(AI_Controller controler)
     {
-
-    }
-
-    public int ListSpottedAmmount()
-    {
-        int countNumber =0;
-        foreach (IndividualDetection detection in detecions)
-        {
-            if (detection.seesThePlayer)
-            {
-                countNumber++;
-            }
-        }
-
-        return countNumber;
+        RemoveFromList(controler);
     }
 }
 
@@ -92,5 +74,4 @@ public class AI_Detection : MonoBehaviour
 public class IndividualDetection
 {
     public AI_Controller controller;
-    public bool seesThePlayer;
 }

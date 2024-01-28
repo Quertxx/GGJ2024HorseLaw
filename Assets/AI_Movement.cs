@@ -15,7 +15,7 @@ public class AI_Movement : MonoBehaviour
         spinPatrol
     }
 
-    public Transform player;
+    private Transform player;
     public Transform[] targets;
     private int index;
     private NavMeshAgent agent;
@@ -23,13 +23,12 @@ public class AI_Movement : MonoBehaviour
     public states stateMachineAI;
     public float spinrate;
     private bool hasStarted = false;
-    public int delayTimer;
+    public int patrolDelayTimer;
     
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
     }
 
     // Update is called once per frame
@@ -63,7 +62,7 @@ public class AI_Movement : MonoBehaviour
                 {
                     patrolTargetSet = false;
                 }
-                agent.destination = player.gameObject.transform.position;
+                agent.destination = playerController.instance.transform.position;
                 break;
             case states.spin:
                 //spins the AI in a circle
@@ -125,7 +124,7 @@ public class AI_Movement : MonoBehaviour
                 {
                     index = 0;
                 }
-                yield return new WaitForSeconds(delayTimer);
+                yield return new WaitForSeconds(patrolDelayTimer);
                 agent.SetDestination(targets[index].position);
                 hasStarted = false;
             }

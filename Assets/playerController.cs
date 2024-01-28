@@ -12,9 +12,21 @@ public class playerController : MonoBehaviour
     private Rigidbody playerRB;
     private Rigidbody playerRB2;
     private Camera cam;
+
+    public static playerController instance;
+    public GameObject playerCollider;
     // Start is called before the first frame update
     void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+
         playerRef = gameObject.transform.GetChild(0).gameObject;
         playerRB = gameObject.GetComponent<Rigidbody>();
         //playerRB2 = playerRef.GetComponent<Rigidbody>();

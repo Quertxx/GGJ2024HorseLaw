@@ -7,13 +7,9 @@ using Micosmo.SensorToolkit;
 [RequireComponent(typeof(AI_Movement))]
 public class AI_Controller : MonoBehaviour
 {
-
-    [Range(1, 5)] public int retaredMeter;
     public LOSSensor lineOfSightSensor;
     public Sensor rangeSensor;
     public AI_Movement movement;
-
-    public GameObject player;
 
     [Header("Stats")]
     public float reactionTime;
@@ -67,27 +63,20 @@ public class AI_Controller : MonoBehaviour
         yield break;
     }
 
-
-    private bool playerDetectionRunning;
-
     public void PlayerEnterRange()
     {
-        if (!playerDetectionRunning)
-        {
-            InvokeRepeating("detecting", 0.1f, 0.05f);
-        }
+        AI_Detection.instance.AddToList(this);
+        Debug.Log(AI_Detection.instance.gameObject);
     }
 
     public void PlayerExitRange()
     {
-        playerDetectionRunning = false;
-        CancelInvoke("detecting");
+        AI_Detection.instance.RemoveFromList(this);
     }
 
 
     private IEnumerator PLayerEnterLos()
     {
-
         if (willChase)
         {
             //set movement to idle
@@ -109,14 +98,6 @@ public class AI_Controller : MonoBehaviour
 
     public float GetPlayerVisibility()
     {
-        return lineOfSightSensor.GetResult(player).Visibility;
+        return lineOfSightSensor.GetResult(playerController.instance.playerCollider).Visibility;
     }
-
-    private void detecting()
-    {
-        playerDetectionRunning = true;
-        AI_Detection.instance.IncreaseDetection(GetPlayerVisibility());
-
-    }
-
 }
