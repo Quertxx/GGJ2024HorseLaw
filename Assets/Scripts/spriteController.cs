@@ -15,6 +15,9 @@ public class spriteController : MonoBehaviour
     public Gradient completeFadeOut; //alpha 100 to alpha 0
     public Sprite[] expressions;
 
+    public float transitionFloat = 100f;
+    public float speakerTransitionFloat = 100f;
+
     private void Awake()
     {
         sprite = GetComponent<Image>();
@@ -22,7 +25,7 @@ public class spriteController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.H))
         {
             FadeInCompletely();
         }
@@ -36,7 +39,7 @@ public class spriteController : MonoBehaviour
     {
         for (int x = 0; x < 100; x++)
         {
-            sprite.color = fadeIn.Evaluate((float)x / 100);
+            sprite.color = fadeIn.Evaluate((float)x / speakerTransitionFloat);
             Debug.Log(sprite.color);
             yield return new WaitForSeconds(0.02f);
         }   
@@ -51,7 +54,7 @@ public class spriteController : MonoBehaviour
     {
         for (int x = 0; x < 100; x++)
         {
-            sprite.color = fadeOut.Evaluate((float)x / 100);
+            sprite.color = fadeOut.Evaluate((float)x / speakerTransitionFloat);
             Debug.Log(sprite.color);
             yield return new WaitForSeconds(0.02f);
         }
@@ -66,9 +69,9 @@ public class spriteController : MonoBehaviour
     {
         for (int x = 0; x < 100; x++)
         {
-            sprite.color = completeFadeIn.Evaluate((float)x / 100);
+            sprite.color = completeFadeIn.Evaluate((float)x / transitionFloat);
             Debug.Log(sprite.color);
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.02f);
         }
     }
 
@@ -81,9 +84,9 @@ public class spriteController : MonoBehaviour
     {
         for (int x = 0; x < 100; x++)
         {
-            sprite.color = completeFadeOut.Evaluate((float)x / 100);
+            sprite.color = completeFadeOut.Evaluate((float)x / transitionFloat);
             Debug.Log(sprite.color);
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.02f); 
         }
     }
 
