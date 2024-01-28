@@ -13,8 +13,13 @@ public class VNSceneManager : MonoBehaviour
         dialogue.SetActive(true);
     }
     
-    void nextScene()
+    public void nextScene()
     {
         //SceneManager.LoadScene();
+    }
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

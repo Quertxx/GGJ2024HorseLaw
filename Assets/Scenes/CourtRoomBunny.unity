@@ -15530,6 +15530,10 @@ PrefabInstance:
       propertyPath: targetObject
       value: 
       objectReference: {fileID: 1239426647}
+    - target: {fileID: 5075564213113036146, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5228014169871138056, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
       propertyPath: targetObject
       value: 
@@ -15622,6 +15626,18 @@ PrefabInstance:
       propertyPath: targetObject
       value: 
       objectReference: {fileID: 1239426647}
+    - target: {fileID: 8818913382134432514, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
+      propertyPath: targetMethod
+      value: mainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818913382134432514, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 963194225}
+    - target: {fileID: 8818913382134432514, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
+      propertyPath: targetMethodText
+      value: 'mainMenu (): Void'
+      objectReference: {fileID: 0}
     - target: {fileID: 8821184684785138034, guid: 983784545f53bd24e8733f755cd13f62, type: 3}
       propertyPath: targetObject
       value: 
