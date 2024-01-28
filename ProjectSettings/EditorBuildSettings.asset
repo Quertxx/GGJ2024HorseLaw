@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/StealthLevel2 1.unity
     guid: d9ff3ad5669a88746a4fa7bc568d41e1
   - enabled: 1
-    path: Assets/Scenes/CourtRoom.unity
+    path: Assets/Scenes/CourtRoomBHenry.unity
+    guid: 56015acd4c60bc44f81d2639a84efa93
+  - enabled: 1
+    path: Assets/Scenes/CourtRoomBunny.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Scenes/SampleScene2.unity

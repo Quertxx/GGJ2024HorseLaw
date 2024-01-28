@@ -44,7 +44,7 @@ public class AI_Controller : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
         {
-            spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length - 1)];
+            spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
             soundSource.clip = defaultSpotSound;
         }
         else
@@ -56,7 +56,7 @@ public class AI_Controller : MonoBehaviour
 
     private void RandomTomSound()
     {
-        soundSource.clip = tomSpotSounds[Random.Range(0, tomSpotSounds.Length - 1)];
+        soundSource.clip = tomSpotSounds[Random.Range(0, tomSpotSounds.Length)];
     }
 
     private void ReturnToDefaultMovement()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AI_Detection : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class AI_Detection : MonoBehaviour
 
     public bool isBeingDetected;
 
+    public float diePercent;
+
+    public Image deathOverlay;
 
 
     public GameObject playerCollider;
@@ -57,7 +61,23 @@ public class AI_Detection : MonoBehaviour
             detection = Mathf.Clamp(detection - detectionDecreaseSpeed * Time.deltaTime, 0, 1);
         }
         detectionBar.value = detection;
+
+        if (detection >= diePercent && !isdead)
+        {
+            deathOverlay.gameObject.SetActive(true);
+            //Time.timeScale = 1;
+            StartCoroutine(Die());
+        }
     }
+    private bool isdead = false;
+
+    private IEnumerator Die()
+    {
+        isdead = true;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 
     public void AddToList(AI_Controller controller)
     {

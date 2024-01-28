@@ -12,14 +12,20 @@ public class VNSceneManager : MonoBehaviour
     {
         dialogue.SetActive(true);
     }
-    
+    public void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     public void nextScene()
     {
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene(3);
     }
 
     public void mainMenu()
     {
+        Debug.Log("ye");
         SceneManager.LoadScene(0);
     }
 }
