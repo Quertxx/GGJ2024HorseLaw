@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 1154624736299731901}
   - component: {fileID: 323828496014597383}
   - component: {fileID: 673177770942423721}
+  - component: {fileID: 3489788780773959628}
   m_Layer: 0
   m_Name: BunnyFlow_V2
   m_TagString: Untagged
@@ -157,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 473.49118, y: 300.3251}
+  scrollPos: {x: 607.5352, y: -392.2277}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 511
@@ -168,8 +169,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 8143268356507255393}
+  selectedCommands:
+  - {fileID: 3489788780773959628}
   variables: []
   description: 
   stepPause: 0
@@ -855,7 +858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 19.872341
+    x: 18.808512
     y: 470.06384
     width: 179.78723
     height: 40
@@ -1224,7 +1227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -3.0769248
+    x: -2.013095
     y: 679
     width: 238.29787
     height: 40
@@ -1288,8 +1291,8 @@ MonoBehaviour:
   itemId: 39
   indentLevel: 0
   storyText: "Yes yes, of course! The name is Dolores, I\u2019m the owner of the
-    most wonderful little a   veggie patch! Until, of course, THAT BUNNY MASSACRED
-    BY BELOVED CARROTS!\n"
+    most wonderful little veggie patch! Until, of course, THAT BUNNY MASSACRED BY
+    BELOVED CARROTS!\n"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1468,6 +1471,7 @@ MonoBehaviour:
   - {fileID: 5228014169871138056}
   - {fileID: 7559054416225492042}
   - {fileID: 8108698000451943495}
+  - {fileID: 3489788780773959628}
   - {fileID: 4912535904427592033}
   - {fileID: 2113521752864797596}
   - {fileID: 6293684002088820584}
@@ -3279,6 +3283,34 @@ MonoBehaviour:
   targetComponentText: spriteController
   targetMethod: FadeIn
   targetMethodText: 'FadeIn (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &3489788780773959628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586334559370067691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 133
+  indentLevel: 0
+  description: switch to questioning
+  targetObject: {fileID: 0}
+  targetComponentAssemblyName: spriteController, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: spriteController
+  targetMethod: Confuse
+  targetMethodText: 'Confuse (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
