@@ -201,7 +201,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 0}
   selectedCommands: []
   variables: []
   description: 
@@ -269,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 262
+    x: 263
     y: 75
     width: 165
     height: 40
@@ -364,7 +365,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 821a7b9fbfee7844a807a649383cad7b, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -901,7 +902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 258.9011
+    x: 259.9011
     y: 435
     width: 176
     height: 40
@@ -1224,8 +1225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 504.86615
-    y: 646.9584
+    x: 506.0025
+    y: 645.822
     width: 231
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1432,8 +1433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 252.54819
-    y: 827.78656
+    x: 250.54819
+    y: 828.78656
     width: 192
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1742,7 +1743,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 0d6c4920625310a48a4888e20b4d5e7f, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -1973,7 +1974,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 0d6c4920625310a48a4888e20b4d5e7f, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -2051,7 +2052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 64
   indentLevel: 0
-  storyText: ' Horse Lawyer to start the prosecution'
+  storyText: Horse Lawyer to start the prosecution
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}

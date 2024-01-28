@@ -13,29 +13,12 @@ public class fungusCameraControl : MonoBehaviour
     public Transform forward;
  
 
-    private void Awake()
-    {
-
-    }
-
-    private void Update() //debugging, remove before build
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            StartLookLeft();
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            StartLookRight();
-        }
-    }
 
     private bool isLookRunning;
     IEnumerator LookForward()
     {
         isLookRunning = true;
-        Quaternion target = Quaternion.Euler(0, 0, 0);
+        Quaternion target = Quaternion.Euler(0, 11.49f, 0);
         while (transform.rotation != target)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, target, turnSpeed);
@@ -64,7 +47,7 @@ public class fungusCameraControl : MonoBehaviour
             yield return null;
         }
     }
-    void StartLookForward()
+    public void StartLookForward()
     {
         if (isLookRunning)
         {
@@ -76,7 +59,7 @@ public class fungusCameraControl : MonoBehaviour
         
     }
 
-    void StartLookRight()
+    public void StartLookRight()
     {
         if (isLookRunning)
         {
@@ -86,7 +69,7 @@ public class fungusCameraControl : MonoBehaviour
         StartCoroutine(LookRight());
     }
 
-    void StartLookLeft ()
+    public void StartLookLeft ()
     {
         if (isLookRunning)
         {

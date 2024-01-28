@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 323828496014597383}
   - component: {fileID: 673177770942423721}
   - component: {fileID: 3489788780773959628}
+  - component: {fileID: 8821184684785138034}
   m_Layer: 0
   m_Name: BunnyFlow_V2
   m_TagString: Untagged
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 607.5352, y: -392.2277}
+  scrollPos: {x: 386.2587, y: 171.60197}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 511
@@ -169,10 +170,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 8143268356507255393}
-  selectedCommands:
-  - {fileID: 3489788780773959628}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -200,7 +199,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 47.846153
     y: -6.8461504
-    width: 124.46808
+    width: 124.04255
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -260,9 +259,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 25
-    y: 65.93617
-    width: 173.40425
+    x: 27.127659
+    y: 64.872345
+    width: 166.59573
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -380,7 +379,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 59
     y: 139
-    width: 96.8085
+    width: 93.40425
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -428,9 +427,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -251.21289
-    y: 270.2658
-    width: 223.40425
+    x: -254.40437
+    y: 272.3935
+    width: 215.10637
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -463,7 +462,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 3
     y: 337.93616
-    width: 213.82977
+    width: 204.04254
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -495,9 +494,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 252
-    y: 280
-    width: 218.0851
+    x: 253.06383
+    y: 281.06384
+    width: 209.14893
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -860,7 +859,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 18.808512
     y: 470.06384
-    width: 179.78723
+    width: 173.40425
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1072,7 +1071,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 56
     y: 552
-    width: 108.510635
+    width: 106.17021
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1197,7 +1196,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -284.67035
     y: 643
-    width: 229.78722
+    width: 223.617
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1227,9 +1226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -2.013095
-    y: 679
-    width: 238.29787
+    x: -3.0769248
+    y: 677.93616
+    width: 230.42552
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1258,9 +1257,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 314
+    x: 316.1277
     y: 659.49255
-    width: 240
+    width: 232.12766
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1456,9 +1455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 26.329653
-    y: 855
-    width: 173.40425
+    x: 25.265823
+    y: 853.93616
+    width: 166.59573
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1489,6 +1488,7 @@ MonoBehaviour:
   - {fileID: 1154624736299731901}
   - {fileID: 323828496014597383}
   - {fileID: 4647093268947442999}
+  - {fileID: 8821184684785138034}
   - {fileID: 6700388601408143665}
   - {fileID: 2267935926995389605}
   - {fileID: 9191718736105511944}
@@ -1583,7 +1583,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 8469a0735c39d2f49a927d64307a73ab, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -1893,7 +1893,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 0d6c4920625310a48a4888e20b4d5e7f, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -2310,9 +2310,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 31.618713
-    y: 961.278
-    width: 112.76595
+    x: 56.086823
+    y: 972.9803
+    width: 110.42553
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3311,6 +3311,34 @@ MonoBehaviour:
   targetComponentText: spriteController
   targetMethod: Confuse
   targetMethodText: 'Confuse (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &8821184684785138034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586334559370067691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 134
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 0}
+  targetComponentAssemblyName: fungusCameraControl, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: fungusCameraControl
+  targetMethod: StartLookRight
+  targetMethodText: 'StartLookRight (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 

@@ -15,6 +15,7 @@ public class spriteController : MonoBehaviour
     public Gradient completeFadeOut; //alpha 100 to alpha 0
     public Sprite[] expressions;
 
+
     public float transitionFloat = 100f;
     public float speakerTransitionFloat = 100f;
 
@@ -99,6 +100,9 @@ public class spriteController : MonoBehaviour
     {
         sprite.color = baseColor;
     }
+
+   
+
 
     public void Base()
     {
