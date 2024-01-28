@@ -321,6 +321,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b6d362ecbf7577346b180775dce081ca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 769172325}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b6d362ecbf7577346b180775dce081ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 769172326}
   m_SourcePrefab: {fileID: 100100000, guid: b6d362ecbf7577346b180775dce081ca, type: 3}
 --- !u!4 &278951831 stripped
 Transform:
@@ -932,6 +935,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &769172326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769172321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b177cef2460039c45ba720b20bde2235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1142771560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,11 +1267,13 @@ MonoBehaviour:
     \nSTAY TUNED FOLKS!\n\n-----------ART----------\nNiamh Quigley - 2D art\nSamuel
     Crookes - Character modelling, 2D art\nBrandon Hayes - Environment modelling\n\n-----------Programming----------\nJack
     Burrup - Character movement, AI movement, camera\nJay Burrows - AI Controller,
-    General (o7) programming assistance\nFilip Czech - Sprite controller, importing
-    VN assets, Fungus edumacation \nand this credits screen\n\n-----------Narrative----------\nElicia
+    General (o7) programming assistance\nFilip Czech - Sprite controller, other visual
+    novel scripts and \nthis credits screen\n\n-----------Narrative----------\nElicia
     Clark - all of the narrative, all of it, Fungussing around\n\n-----------Sound
-    Design and Music----------\nZacch (Sounds Zazzy) - Sound Design (real horse noises)\nThomas
-    Battey - his voice\n\t\n-----------Emotional Support----------\nLouie Danby-Cross"
+    Design and Music----------\nZacch (Sounds Zazzy) - Sound Design and music composition\nThomas
+    Battey - his voice\n\t\n-----------Emotional Support----------\nLouie Danby-Cross\n\n-----------Photograph
+    Sprites----------\nThe Team\nLots of fellow jammers from our site <3\n\n\n\n\n\nTHANK
+    YOU FOR PLAYING"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63f43688f725ccd4cb331dcdb8f216de, type: 2}
   m_sharedMaterial: {fileID: -1043947032720676631, guid: 63f43688f725ccd4cb331dcdb8f216de, type: 2}
