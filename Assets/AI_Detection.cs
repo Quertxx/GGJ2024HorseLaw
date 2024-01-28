@@ -66,7 +66,7 @@ public class AI_Detection : MonoBehaviour
 
     public void RemoveFromList(AI_Controller controler)
     {
-        RemoveFromList(controler);
+        detections.Remove(controler);
     }
 }
 

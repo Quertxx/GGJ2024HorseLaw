@@ -25,11 +25,38 @@ public class AI_Controller : MonoBehaviour
 
     public bool willChase;
 
+    [Header("Sprites")]
+    [SerializeField] private Sprite[] sprites;
+    private SpriteRenderer spriteRenderer;
+    private bool isTom;
+
+    [Header("Sounds")]
+    [SerializeField] private AudioClip defaultSpotSound;
+    [SerializeField] private AudioClip[] tomSpotSounds;
+    private AudioSource soundSource;
+
     // Start is called before the first frame update
     void Start()
     {
         ReturnToDefaultMovement();
 
+        soundSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer.sprite == null)
+        {
+            spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length - 1)];
+            soundSource.clip = defaultSpotSound;
+        }
+        else
+        {
+            isTom = true;
+            RandomTomSound();
+        }
+    }
+
+    private void RandomTomSound()
+    {
+        soundSource.clip = tomSpotSounds[Random.Range(0, tomSpotSounds.Length - 1)];
     }
 
     private void ReturnToDefaultMovement()
@@ -89,6 +116,13 @@ public class AI_Controller : MonoBehaviour
     public void PlayerEnterLOS()
     {
         StartCoroutine(PLayerEnterLos());
+
+        if (isTom)
+        {
+            RandomTomSound();
+        }
+
+        soundSource.Play();
     }
 
     public void PlayerLeaveLOS()
