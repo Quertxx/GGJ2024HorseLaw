@@ -773,7 +773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d3aa9d56c3e7f4bac0fa4ae5c1b78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 784544966}
   targets:
   - {fileID: 390784765}
   - {fileID: 1602776394}
@@ -954,6 +953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpPower: 0
+  playerCollider: {fileID: 0}
 --- !u!54 &784544965
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3368,6 +3368,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 514982452}
+    - target: {fileID: 3054354843908254331, guid: 50628607852c99849b5268eb9ef8594b, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 1295746492}
     - target: {fileID: 3425469794401068693, guid: 50628607852c99849b5268eb9ef8594b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.52975
@@ -3582,11 +3586,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c7fbb7c76388e4594e28f9a0527004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retaredMeter: 0
   lineOfSightSensor: {fileID: 4794176402751809802}
   rangeSensor: {fileID: 8352973494265508085}
   movement: {fileID: 9168169874913770104}
-  player: {fileID: 1295746492}
   reactionTime: 2
   movementType: 0
   willChase: 1
@@ -3602,7 +3604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d3aa9d56c3e7f4bac0fa4ae5c1b78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3353589341195431995}
   targets:
   - {fileID: 390784765}
   - {fileID: 1602776394}
