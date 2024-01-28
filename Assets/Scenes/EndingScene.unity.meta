@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/EndingScene.unity.meta
 guid: f1750d9ee47e24648be97c6e38045ba7
+========
+guid: a0f402167ce8dcf4c998af677c15f88c
+>>>>>>>> origin/Sprites-and-methods:Assets/Scenes/dialoguething.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

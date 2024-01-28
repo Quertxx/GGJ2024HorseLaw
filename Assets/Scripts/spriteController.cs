@@ -13,6 +13,10 @@ public class spriteController : MonoBehaviour
     public Gradient fadeOut; //white to gray
     public Gradient completeFadeIn; //alpha 0 to alpha 100
     public Gradient completeFadeOut; //alpha 100 to alpha 0
+    public Sprite[] expressions;
+
+    public float transitionFloat = 100f;
+    public float speakerTransitionFloat = 100f;
 
     private void Awake()
     {
@@ -21,7 +25,7 @@ public class spriteController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.H))
         {
             FadeInCompletely();
         }
@@ -35,7 +39,7 @@ public class spriteController : MonoBehaviour
     {
         for (int x = 0; x < 100; x++)
         {
-            sprite.color = fadeIn.Evaluate((float)x / 100);
+            sprite.color = fadeIn.Evaluate((float)x / speakerTransitionFloat);
             Debug.Log(sprite.color);
             yield return new WaitForSeconds(0.02f);
         }   
@@ -50,7 +54,7 @@ public class spriteController : MonoBehaviour
     {
         for (int x = 0; x < 100; x++)
         {
-            sprite.color = fadeOut.Evaluate((float)x / 100);
+            sprite.color = fadeOut.Evaluate((float)x / speakerTransitionFloat);
             Debug.Log(sprite.color);
             yield return new WaitForSeconds(0.02f);
         }
@@ -65,9 +69,9 @@ public class spriteController : MonoBehaviour
     {
         for (int x = 0; x < 100; x++)
         {
-            sprite.color = completeFadeIn.Evaluate((float)x / 100);
+            sprite.color = completeFadeIn.Evaluate((float)x / transitionFloat);
             Debug.Log(sprite.color);
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.02f);
         }
     }
 
@@ -80,9 +84,9 @@ public class spriteController : MonoBehaviour
     {
         for (int x = 0; x < 100; x++)
         {
-            sprite.color = completeFadeOut.Evaluate((float)x / 100);
+            sprite.color = completeFadeOut.Evaluate((float)x / transitionFloat);
             Debug.Log(sprite.color);
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.02f); 
         }
     }
 
@@ -94,5 +98,50 @@ public class spriteController : MonoBehaviour
     public void Appear() //used to make a sprite appear immediately with no fading
     {
         sprite.color = baseColor;
+    }
+
+    public void Base()
+    {
+        sprite.sprite = expressions[0];
+    }
+
+    public void Anger()
+    {
+        sprite.sprite = expressions[1];
+    }
+
+    public void Axe()
+    {
+        sprite.sprite = expressions[2];
+    }
+
+    public void Confuse()
+    {
+        sprite.sprite = expressions[3];
+    }
+
+    public void Depress()
+    {
+        sprite.sprite = expressions[4];
+    }
+
+    public void Shock()
+    {
+        sprite.sprite = expressions[5];
+    }
+
+    public void Smirk()
+    {
+        sprite.sprite = expressions[6];
+    }
+
+    public void Smug()
+    {
+        sprite.sprite = expressions[7];
+    }
+
+    public void Worry()
+    {
+        sprite.sprite = expressions[8];
     }
 }

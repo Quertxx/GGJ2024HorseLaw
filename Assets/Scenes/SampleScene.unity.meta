@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/SampleScene.unity.meta
 guid: c1d9cd322028b2040839bea46a56b45f
+========
+guid: 39c4af2bfb4224c4e9a21d24a513e430
+folderAsset: yes
+>>>>>>>> origin/Sprites-and-methods:Assets/Prefabs.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
