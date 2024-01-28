@@ -68,20 +68,16 @@ public class AI_Controller : MonoBehaviour
     }
 
 
-    private bool playerDetectionRunning;
 
     public void PlayerEnterRange()
     {
-        if (!playerDetectionRunning)
-        {
-            InvokeRepeating("detecting", 0.1f, 0.05f);
-        }
+        AI_Detection.instance.AddToList(this);
+        Debug.Log(AI_Detection.instance.gameObject);
     }
 
     public void PlayerExitRange()
     {
-        playerDetectionRunning = false;
-        CancelInvoke("detecting");
+        AI_Detection.instance.RemoveFromList(this);
     }
 
 
@@ -111,12 +107,4 @@ public class AI_Controller : MonoBehaviour
     {
         return lineOfSightSensor.GetResult(player).Visibility;
     }
-
-    private void detecting()
-    {
-        playerDetectionRunning = true;
-        AI_Detection.instance.IncreaseDetection(GetPlayerVisibility());
-
-    }
-
 }

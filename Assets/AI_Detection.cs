@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,8 +17,8 @@ public class AI_Detection : MonoBehaviour
 
 
 
-
-    public List<IndividualDetection> detecions;
+    public GameObject playerCollider;
+    public List<IndividualDetection> detections;
     private void OnEnable()
     {
         if (instance == null)
@@ -33,11 +34,17 @@ public class AI_Detection : MonoBehaviour
     public void IncreaseDetection(float detectionAmmount)
     {
         isBeingDetected = true;
+
         Debug.Log("final test " + detectionAmmount );
+
         float detectionIncrease = detectionAmmount * detectionSpeed * Time.deltaTime;
+
         Debug.Log(detectionIncrease);
+
         detection = Mathf.Clamp(detection + detectionIncrease,0,1);
+
         Debug.Log(detection);
+
         detectionBar.value = detection;
 
         if (detectionAmmount == 0)
@@ -45,46 +52,80 @@ public class AI_Detection : MonoBehaviour
             StopDetection();
         }
     }
-
     public void StopDetection()
     {
         isBeingDetected = false;
     }
 
+    //void NewDetection()
+    //{
+
+    //    if (numberOfDetects > 0)
+    //    {
+    //        float detectionIncrease = 0;
+    //        foreach (IndividualDetection detection in detections)
+    //        {
+    //            detectionIncrease += detection.controller.lineOfSightSensor.GetResult(playerCollider).Visibility;
+    //        }
+
+    //        detectionIncrease = detectionIncrease * Time.deltaTime * detectionSpeed;
+    //        detection = Mathf.Clamp(detection + detectionIncrease, 0, 1);
+    //    }
+    //    else
+    //    {
+    //        detection = Mathf.Clamp(detection - detectionDecreaseSpeed * Time.deltaTime, 0, 1);
+    //    }
+
+    //    detectionBar.value = detection;
+    //}
+
     private void Update()
     {
-        if (!isBeingDetected)
+        NewNewDetection();
+    }
+    void NewNewDetection()
+    {
+        int countNumber = 0;
+        float detectionIncrease = 0;
+        foreach (IndividualDetection detection in detections)
+        {
+            float temp = detection.controller.lineOfSightSensor.GetResult(playerCollider).Visibility;
+            if (temp > 0)
+            {
+                countNumber++;
+                detectionIncrease += detection.controller.lineOfSightSensor.GetResult(playerCollider).Visibility;
+            }
+        }
+        if (countNumber > 0)
+        {
+            detectionIncrease = detectionIncrease * Time.deltaTime * detectionSpeed;
+            detection = Mathf.Clamp(detection + detectionIncrease, 0, 1);
+        }
+        else
         {
             detection = Mathf.Clamp(detection - detectionDecreaseSpeed * Time.deltaTime, 0, 1);
-            detectionBar.value = detection;
         }
-
-        Debug.Log("List has " + ListSpottedAmmount());
-
+        detectionBar.value = detection;
     }
 
-    public void AddToList(AI_Controller controler)
+    public void AddToList(AI_Controller controller)
     {
+        IndividualDetection newAdd = new IndividualDetection();
+        newAdd.controller = controller;
 
+
+        detections.Add(newAdd);
     }
 
     public void RemoveFromList(AI_Controller controler)
     {
-
-    }
-
-    public int ListSpottedAmmount()
-    {
-        int countNumber =0;
-        foreach (IndividualDetection detection in detecions)
+        foreach (IndividualDetection detection in detections)
         {
-            if (detection.seesThePlayer)
+            if (detection.controller == controler)
             {
-                countNumber++;
+                detections.Remove(detection);
             }
         }
-
-        return countNumber;
     }
 }
 

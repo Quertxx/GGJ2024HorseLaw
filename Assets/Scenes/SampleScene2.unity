@@ -2159,6 +2159,8 @@ MonoBehaviour:
   detectionSpeed: 1
   detectionDecreaseSpeed: 1
   isBeingDetected: 0
+  playerCollider: {fileID: 1295746492}
+  detections: []
 --- !u!4 &1445697641
 Transform:
   m_ObjectHideFlags: 0
