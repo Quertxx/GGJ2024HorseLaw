@@ -14,6 +14,8 @@ public class spriteController : MonoBehaviour
     public Gradient completeFadeIn; //alpha 0 to alpha 100
     public Gradient completeFadeOut; //alpha 100 to alpha 0
     public Sprite[] expressions;
+    public AudioSource audioPlayer;
+    public AudioClip[] sounds;
 
 
     public float transitionFloat = 100f;
@@ -101,9 +103,6 @@ public class spriteController : MonoBehaviour
         sprite.color = baseColor;
     }
 
-   
-
-
     public void Base()
     {
         sprite.sprite = expressions[0];
@@ -147,5 +146,10 @@ public class spriteController : MonoBehaviour
     public void Worry()
     {
         sprite.sprite = expressions[8];
+    }
+
+    public void Victory()
+    {
+        sprite.sprite = expressions[9];
     }
 }
