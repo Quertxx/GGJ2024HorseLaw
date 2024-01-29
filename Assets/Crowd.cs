@@ -6,7 +6,7 @@ public class Crowd : MonoBehaviour
 {
     [Header("sprites")]
     [SerializeField] private Sprite[] sprites;
-    private SpriteRenderer renderer;
+    private SpriteRenderer srenderer;
 
     [Header("rotation")]
     [SerializeField]private float randomRotationOffset;
@@ -22,9 +22,9 @@ public class Crowd : MonoBehaviour
     {
         player = playerController.instance.gameObject;
 
-        renderer = GetComponent<SpriteRenderer>();
+        srenderer = GetComponent<SpriteRenderer>();
 
-        renderer.sprite = sprites[Random.Range(0, sprites.Length)];
+        srenderer.sprite = sprites[Random.Range(0, sprites.Length)];
 
         rotationOffset = Random.Range(-randomRotationOffset, randomRotationOffset);
 

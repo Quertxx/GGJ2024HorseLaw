@@ -6,17 +6,25 @@ using UnityEngine.SceneManagement;
 public class VNSceneManager : MonoBehaviour
 {
     public GameObject dialogue;
+    private AudioSource music;
 
     // Start is called before the first frame update
     void Awake()
     {
-        dialogue.SetActive(true);
+        //if (dialogue != null)
+        //{
+        //    dialogue.SetActive(true);
+        //}
+        music = GetComponent<AudioSource>();
     }
     public void Start()
     {
+        
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
+        
     }
+    
 
     public void nextScene()
     {
@@ -26,6 +34,12 @@ public class VNSceneManager : MonoBehaviour
     public void mainMenu()
     {
         Debug.Log("ye");
-        SceneManager.LoadScene(0);
+        StartCoroutine(delaythenchangeScene());
+    }
+
+    IEnumerator delaythenchangeScene()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(1);
     }
 }

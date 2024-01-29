@@ -45,7 +45,9 @@ public class fungusCameraControl : MonoBehaviour
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, target, turnSpeed);
             yield return null;
+            StopCoroutine(LookLeft());
         }
+
     }
     public void StartLookForward()
     {

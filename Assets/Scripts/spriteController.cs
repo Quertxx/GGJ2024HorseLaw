@@ -43,7 +43,7 @@ public class spriteController : MonoBehaviour
         for (int x = 0; x < 100; x++)
         {
             sprite.color = fadeIn.Evaluate((float)x / speakerTransitionFloat);
-            Debug.Log(sprite.color);
+            //Debug.Log(sprite.color);
             yield return new WaitForSeconds(0.02f);
         }   
     }
