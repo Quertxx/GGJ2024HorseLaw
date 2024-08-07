@@ -19,6 +19,6 @@ public class ChangeLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene(4);
     }
 }
