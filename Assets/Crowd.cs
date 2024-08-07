@@ -24,7 +24,7 @@ public class Crowd : MonoBehaviour
 
         renderer = GetComponent<SpriteRenderer>();
 
-        renderer.sprite = sprites[Random.Range(0, sprites.Length - 1)];
+        renderer.sprite = sprites[Random.Range(0, sprites.Length)];
 
         rotationOffset = Random.Range(-randomRotationOffset, randomRotationOffset);
 

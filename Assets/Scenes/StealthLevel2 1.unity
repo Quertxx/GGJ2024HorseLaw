@@ -61632,11 +61632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3425469794401068693, guid: 50628607852c99849b5268eb9ef8594b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008416108
+      value: -0.000000008416105
       objectReference: {fileID: 0}
     - target: {fileID: 3425469794401068693, guid: 50628607852c99849b5268eb9ef8594b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000017843871
+      value: 0.0000000017843865
       objectReference: {fileID: 0}
     - target: {fileID: 4452953977551747998, guid: 50628607852c99849b5268eb9ef8594b, type: 3}
       propertyPath: m_XAxis.m_InvertInput
@@ -68753,6 +68753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1573117177}
     m_Modifications:
+    - target: {fileID: 2059917672605808764, guid: 9d976233fa33d674dbe2d9ac0a66d8f2, type: 3}
+      propertyPath: sprites.Array.size
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6230113178263223705, guid: 9d976233fa33d674dbe2d9ac0a66d8f2, type: 3}
       propertyPath: m_Name
       value: Crowd (407)
@@ -76656,7 +76660,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396460878}
-  m_LocalRotation: {x: 0.2074099, y: 0.000000008416108, z: -0.0000000017843871, w: 0.97825414}
+  m_LocalRotation: {x: 0.2074099, y: -0.000000008416105, z: 0.0000000017843865, w: 0.97825414}
   m_LocalPosition: {x: 6.8112574, y: 2.7241826, z: -3.6868014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
